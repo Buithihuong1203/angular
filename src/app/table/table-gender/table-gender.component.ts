@@ -6,10 +6,10 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./table-gender.component.css']
 })
 export class TableGenderComponent implements OnInit {
-  @Input() gender: string;
+  @Input() gender: number;
 
   constructor() {
-    this.gender = '';
+    this.gender = 0;
   }
 
   ngOnInit(): void {

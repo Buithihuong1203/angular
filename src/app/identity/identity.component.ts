@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./identity.component.css']
 })
 export class IdentityComponent implements OnInit {
-  @Input() Id: any;
+  @Input() Id: string;
 
   constructor() {
     this.Id = '';

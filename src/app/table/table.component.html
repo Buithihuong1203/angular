@@ -17,8 +17,7 @@
             </td>
             <td>{{teacher.age}}</td>
             <td>
-                <span *ngIf=" teacher.gender === 1" class="text-danger">Nam</span>
-                <span *ngIf=" teacher.gender=== 0" class="text-body">Nữ</span>
+                <app-table-gender [gender]="teacher.gender"></app-table-gender>
             </td>
             <td>
                 <app-table-avatar [src]="teacher.avatar" [age]="teacher.age"></app-table-avatar>
