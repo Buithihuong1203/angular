@@ -1,0 +1,33 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Avatar</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor=" let teacher of teachers">
+            <td>{{teacher.id}}</td>
+            <td>
+                <app-table-name [name]="teacher.name"></app-table-name>
+            </td>
+            <td>{{teacher.age}}</td>
+            <td>
+                <span *ngIf=" teacher.gender === 1" class="text-danger">Nam</span>
+                <span *ngIf=" teacher.gender=== 0" class="text-body">Nữ</span>
+            </td>
+            <td>
+                <app-table-avatar [src]="teacher.avatar" [age]="teacher.age"></app-table-avatar>
+                <!--<img src={{teacher.avatar}} alt="{{teacher.name}} ">-->
+                <!--<img [src]="teacher.avatar" [alt]="teacher.name">-->
+            </td>
+            <td>
+                <app-table-status [status]="teacher.status"></app-table-status>
+            </td>
+        </tr>
+    </tbody>
+</table>

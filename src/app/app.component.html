@@ -7,7 +7,7 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<style>
+<!--<style>
   :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
@@ -303,7 +303,7 @@
   }
 </style>
 
-<!-- Toolbar -->
+ Toolbar 
 <div class="toolbar" role="banner">
   <img width="40" alt="Angular Logo"
     src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
@@ -328,6 +328,7 @@
 </div>
 
 <div class="content" role="main">
+  <button class="btn btn-danger">DSSV</button>
   <div>
     <table border="1">
       <thead>
@@ -352,7 +353,7 @@
     </table>
   </div>
 
-  <!-- Highlight Card -->
+ Highlight Card
   <div class="card highlight-card card-small">
 
     <svg id="rocket" xmlns="http://www.w3.org/2000/svg" width="101.678" height="101.678" viewBox="0 0 101.678 101.678">
@@ -385,7 +386,7 @@
 
   </div>
 
-  <!-- Resources -->
+Resources 
   <h2>Resources</h2>
   <p>Here are some links to help you get started:</p>
 
@@ -463,7 +464,7 @@
 
   </div>
 
-  <!-- Next Steps -->
+ Next Steps
   <h2>Next Steps</h2>
   <p>What do you want to do next with your app?</p>
 
@@ -513,7 +514,7 @@
     </button>
   </div>
 
-  <!-- Terminal -->
+ Terminal
   <div class="terminal" [ngSwitch]="selection.value">
     <pre *ngSwitchDefault>ng generate component xyz</pre>
     <pre *ngSwitchCase="'material'">ng add @angular/material</pre>
@@ -523,7 +524,7 @@
     <pre *ngSwitchCase="'build'">ng build</pre>
   </div>
 
-  <!-- Links -->
+Links
   <div class="card-container">
     <a class="circle-link" title="Find a Local Meetup" href="https://www.meetup.com/find/?keywords=angular"
       target="_blank" rel="noopener">
@@ -547,7 +548,7 @@
     </a>
   </div>
 
-  <!-- Footer -->
+Footer
   <footer>
     Love Angular?&nbsp;
     <a href="https://github.com/angular/angular" target="_blank" rel="noopener"> Give our repo a star.
@@ -576,12 +577,17 @@
 
 </div>
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+-->
+<div class="container">
+  <div class="">
+    <app-table [users]="teachers"></app-table>
+  </div>
+  <div>
+    Tên SV : <app-name [name]="studentName"></app-name>
+    <!--không có ngoặc vuông thì là 1 chuỗi , có ngoặc thì là 1 biến (vd : name)-->
 
-<router-outlet></router-outlet>
+    Mã SV : <app-identity [id]="studentId"></app-identity>
+
+
+  </div>
+</div>
