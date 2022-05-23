@@ -13,7 +13,14 @@ import { TableStatusComponent } from './table/table-status/table-status.componen
 import { TableAvatarComponent } from './table/table-avatar/table-avatar.component';
 import { ShowValidateComponent } from './components/show-validate/show-validate.component';
 import { FormComponent } from './form/form.component';
-import { FormComponentComponent } from './form-component/form-component.component';
+import { FormsModule } from '@angular/forms';
+import { UserComponent } from './user/user.component';
+import { UserListComponent } from './user/user-list/user-list.component';
+import { UserFormComponent } from './user/user-form/user-form.component';
+
+
+
+//import { FormComponentComponent } from './form-component/form-component.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +34,17 @@ import { FormComponentComponent } from './form-component/form-component.componen
     TableAvatarComponent,
     ShowValidateComponent,
     FormComponent,
-    FormComponentComponent
+    UserComponent,
+    UserListComponent,
+    UserFormComponent,
+
+    //FormComponentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
